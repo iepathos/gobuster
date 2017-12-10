@@ -1,3 +1,3 @@
 #!/bin/bash
-
-docker run -it --name gobuster gobuster $@
+docker rm gobuster > /dev/null
+docker run -it --name gobuster -v subdomains.txt:/subdomains.txt gobuster -w /subdomains.txt $@
