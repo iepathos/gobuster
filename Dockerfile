@@ -19,6 +19,5 @@ RUN curl -O https://storage.googleapis.com/golang/go1.8.linux-amd64.tar.gz && \
 	go get && go build && \
 	go install
 
-ADD subdomains.txt subdomains.txt
 ENTRYPOINT ["/root/work/bin/gobuster"]
 CMD ["-h"]
