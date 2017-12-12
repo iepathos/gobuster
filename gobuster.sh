@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker run -it -v words:/words gobuster $@
+docker run -t -v words:/words gobuster $@
